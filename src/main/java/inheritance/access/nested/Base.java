@@ -3,7 +3,7 @@ package inheritance.access.nested;
 public class Base
 {
 	public final int x;
-	private final int y;
+	private int y;
 
 	public Base(int x, int y)
 	{
@@ -19,6 +19,11 @@ public class Base
 	public int getY()
 	{
 		return y;
+	}
+
+	public void setY(int y)
+	{
+		this.y = y;
 	}
 
 	public class Nested extends Base

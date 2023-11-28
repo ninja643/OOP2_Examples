@@ -2,17 +2,22 @@ package inheritance.access.nested;
 
 public class Derived extends Base
 {
-	private final int y;
+	private final int z;
 
 	public Derived(int x, int y)
 	{
 		super(x, y);
-		this.y = 2 * y;
+		this.z = 2 * y;
 	}
 
 	@Override
 	public int sum()
 	{
-		return x + y;
+		return x + z;
+	}
+
+	public int superSum()
+	{
+		return x + getY();
 	}
 }
