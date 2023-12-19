@@ -15,6 +15,21 @@ public class Bicycle
 		speed = startSpeed;
 	}
 
+	public int getCadence()
+	{
+		return cadence;
+	}
+
+	public int getGear()
+	{
+		return gear;
+	}
+
+	public int getSpeed()
+	{
+		return speed;
+	}
+
 	// the Bicycle class has four methods
 	public void setCadence(int newValue)
 	{

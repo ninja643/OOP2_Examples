@@ -2,12 +2,12 @@ package polymorphism;
 
 public class MountainBike extends Bicycle
 {
-	private String suspension;
+	private final String suspension;
 
 	public MountainBike(int startCadence, int startSpeed, int startGear, String suspensionType)
 	{
 		super(startCadence, startSpeed, startGear);
-		setSuspension(suspensionType);
+		suspension = suspensionType;
 	}
 
 	public String getSuspension()
@@ -15,15 +15,10 @@ public class MountainBike extends Bicycle
 		return suspension;
 	}
 
-	public void setSuspension(String suspensionType)
-	{
-		this.suspension = suspensionType;
-	}
-
 	@Override
 	public void printDescription()
 	{
 		super.printDescription();
-		System.out.println("The " + "MountainBike has a" + getSuspension() + " suspension.");
+		System.out.println("The " + "MountainBike has a " + getSuspension() + " suspension.");
 	}
 }
